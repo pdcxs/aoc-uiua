@@ -1,4 +1,20 @@
-┌─╴Mod ~ Between Factors
-  Between ← ⊙◌ ×⊙(≤⊸(⊙⊣)⊸(⊢)↘1)≥⊸(⊙⊣)⊸(⊢)⊟₃
+┌─╴Mod ~ BetArr Between Factors Range
+  BetArr  ← ×⊙≥⊙⊙⊣⤚(≤)⊙⊸⊢
+  Between ← ˜BetArr⊟
   Factors ← ˜▽⊙(=0)⟜◿+1⇡⌊⊸÷2
+  Range   ← +⇡⤚-
+└─╴
+
+┌─╴Test
+  ˙⍤ =1 BetArr 5 [0 10]
+  ˙⍤ =0 BetArr 5 [0 3]
+  ˙⍤ =0 BetArr 5 [10 12]
+  ˙⍤ =1 BetArr 5 [0 5]
+  ˙⍤ =1 Between 0 10 5
+  ˙⍤ =0 Between 0 3 5
+  ˙⍤ =0 Between 10 12 5
+  ˙⍤ =1 Between 0 5 5
+
+  ˙⍤ ≍ [1 2 3 4 6] Factors 12
+  ˙⍤ ≍ [3 4 5 6] Range 3 7
 └─╴
