@@ -18,5 +18,6 @@ Invalid′ ← (
   >0/+ # is any split match?
 )
 NotSingle ← ⨬(Invalid′|0)⊸(<10)
-/+≡(/+▽⊸(≡Invalid)GetRange°⊟) Nums   # Problem 1
-/+≡(/+▽⊸(≡NotSingle)GetRange°⊟) Nums # Problem 2
+Solve!    ← /+≡(/+▽⊸(≡^0)GetRange°⊟)
+Solve!Invalid Nums
+Solve!NotSingle Nums
