@@ -1,25 +1,26 @@
-# Experimental!
 RawStr ← &fras "./input.txt"
 Lines  ← ⊜∘⊸(¬∊"\n\r")RawStr
-# remove last n digits
-Rem     ← ⇌↘⊙⇌
-Extract ← ˜↘⊙(+1⊢⊚)⟜=
-Step ← (
-  # input: digit length, current string, history
-  -1   # digit length minus one
-  ◠Rem # remove tail digits
-  ⊙(
-    ⊙/↥      # find the max value
-    ⊸Extract # update current string
-    ⊙˜⊂      # update history
-  )
-)
-GetMaxBy ← ⋕◌◌⍢(Step|>0)
-
-/+≡(GetMaxBy 2) Lines [""]
-/+≡(GetMaxBy 12) Lines [""]
+Step   ← ⟜(⊃(↘+1⊢⊚⊸=|˜⊂⊙◌)⊙⇌/↥⊸↘⊙⇌)-1
+SolBy  ← ⋕◌◌⍢(Step|>0)
+Sol!   ← /+≡(˜(SolBy^0)"")
+Sol!2Lines
+Sol!12Lines
 
 ┌─╴Test
-  ˙⍤ ≍ "123" Rem 3 "123456"
-  ˙⍤ ≍ "45678" Extract "12345678" @3
+  ˙⍤ = 1 /×[
+    =2
+    ⊙(≍"56")
+    ⊙⊙(≍"4")
+  ] Step 3 "123456" ""
+  ˙⍤ = 1 /×[
+    =1
+    ⊙(≍"6")
+    ⊙⊙(≍"45")
+  ] Step 2 "56" "4"
+  ˙⍤ = 1 /×[
+    =0
+    ⊙(≍"")
+    ⊙⊙(≍"456")
+  ] Step 1 "6" "45"
+  ˙⍤ = 434234234278 SolBy 12 "234234234234278" ""
 └─╴
