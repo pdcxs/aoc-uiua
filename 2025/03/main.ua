@@ -1,8 +1,8 @@
-RawStr ← &fras "./input.txt"
-Lines  ← ⊜∘⊸(¬∊"\n\r")RawStr
-Step   ← ⟜(⊃(↘+1⊢⊚⊸=|˜⊂⊙◌)⊙⇌/↥⊸↘⊙⇌)-1
-SolBy  ← ⋕◌◌⍢(Step|>0)
-Sol!   ← /+≡(˜(SolBy^0)"")
+~ "../../lib/utils" ~ LinesBy! ReadFile
+Lines ← LinesBy!∘ ReadFile "input.txt"
+Step  ← ⟜(⊃(↘+1⊢⊚⊸=|˜⊂⊙◌)⊙⇌/↥⊸↘⊙⇌)-1
+SolBy ← ⋕◌◌⍢(Step|>0)
+Sol!  ← /+≡(˜(SolBy^0)"")
 Sol!2Lines
 Sol!12Lines
 

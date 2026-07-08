@@ -1,6 +1,6 @@
-RawStr  ← &fras "input.txt"
+~ "../../lib/utils" ~ LinesBy! ReadFile
 AddWall ← ≡(˜⊂@.⊂@.)˜⊂⟜⊂˜↯@.⊸(⧻⊢)
-Lines   ← AddWall⊜∘⊸(¬∊"\r\n")RawStr
+Lines   ← AddWall LinesBy!∘ ReadFile "input.txt"
 Count   ← ⊙◌/+=@@≡(⊡+)(⊂A₂C₂)⊸(∩¤)
 Rm      ← ⍜(⊡)(˜↯@.⧻)
 Step    ← ⤚(⊙(Rm⊙°¤))⊃(/+|≡⊡⊚)⊙¤<4◡(≡(Count))⊙¤⊚⊸(=@@)

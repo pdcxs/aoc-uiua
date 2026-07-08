@@ -1,9 +1,10 @@
-┌─╴Mod ~ BetArr Between Factors Range
-  BetArr  ← ×⊙≥⊙⊙⊣⤚(≤)⊙⊸⊢
-  Between ← ˜BetArr⊟
-  Factors ← ˜▽⊙(=0)⟜◿+1⇡⌊⊸÷2
-  Range   ← +⇡⤚-
-└─╴
+BetArr   ← ×⊙≥⊙⊙⊣⤚(≤)⊙⊸⊢
+Between  ← ˜BetArr⊟
+Factors  ← ˜▽⊙(=0)⟜◿+1⇡⌊⊸÷2
+Range    ← +⇡⤚-
+ReadFile ← ▽⊸(≠@\r)&fras
+LinesBy! ← ⊜^0⊸(≠@\n)
+SpBlkLn  ← ⊜□=0+⊸(⬚0↻¯1)⊸(⌕"\n\n")
 
 ┌─╴Test
   ˙⍤ =1 BetArr 5 [0 10]
