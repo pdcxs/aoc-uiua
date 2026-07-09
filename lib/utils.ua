@@ -5,6 +5,7 @@ Range    ← +⇡⤚-
 ReadFile ← ▽⊸(≠@\r)&fras
 LinesBy! ← ⊜^0⊸(≠@\n)
 SpBlkLn  ← ⊜□=0+⊸(⬚0↻¯1)⊸(⌕"\n\n")
+AllSame  ← /×⧈(=°⊟)2
 
 ┌─╴Test
   ˙⍤ =1 BetArr 5 [0 10]
