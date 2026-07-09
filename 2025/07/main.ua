@@ -2,7 +2,7 @@
 Lines    ← LinesBy!∘ ReadFile "input.txt"
 Start    ← =@S⊢Lines
 Spliters ← =@^▽⊸≡(¬/×≠@^)Lines
-Sol      ← ∧(⊙(+/+>0×)+⊙(◡(×¬))+⊃(⬚0↻1|⬚0↻¯1)◡×)Spliters
+Sol      ← ∧(⊙(+/+>0×)+⊙(◡(×¬))+⊃(↻1|↻¯1)◡×)Spliters
 ⍜⊟⇌/+Sol Start 0
 
 # --- Sol Function Breakdown ---
